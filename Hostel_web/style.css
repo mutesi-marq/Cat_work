@@ -1,0 +1,1047 @@
+        /* Universal styles */
+
+        :root {
+            --hero-height: 80vh; /* You can change this value anytime */
+            --overlay-height: 60vh;
+
+          }
+          
+        /* * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Century Gothic;
+        } */
+
+     
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+          }
+
+         /* Top bar styling */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background: #ffffff; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 10; */
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Logo styling */
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+    display: flex;
+    align-items: center;
+    /* margin-left: 2%; */
+    gap: 8px;
+  }
+  
+  /* Nav button wrapper */
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  /* Nav buttons */
+  .nav-btn, .menu-btn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+  
+  /* Hover effect */
+  .nav-btn:hover, .menu-btn:hover {
+    background: #f2f2f2;
+    color: #7b2cbf;
+  }
+  
+  /* Menu button style (if you want it to stand out slightly) */
+  .menu-btn {
+    font-size: 1.2rem;
+  }
+  
+/* Medium screen adjustments */
+@media (max-width: 992px) {
+    .top-bar {
+      padding: 16px 30px;
+    }
+  
+    .logo {
+      font-size: 1.4rem;
+    }
+  
+    .nav-btn, .menu-btn {
+      font-size: 0.95rem;
+      padding: 6px 12px;
+    }
+  }
+  
+  /* Small screen adjustments */
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px 20px;
+    }
+  
+    .logo {
+      font-size: 1.3rem;
+    }
+  
+    .nav-buttons {
+      margin-top: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .nav-btn, .menu-btn {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+    }
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 1.2rem;
+    }
+  
+    .nav-btn, .menu-btn {
+      font-size: 0.85rem;
+      padding: 5px 10px;
+    }
+  }
+  
+          
+           
+          
+          body {
+            background: #f2f2f2;
+          }
+          
+          .hero {
+            position: relative;
+            width: 90%;
+            height: var(--hero-height);
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 30px;
+            box-shadow: 0 25px 40px -10px rgba(0, 0, 0, 0.5);
+          }
+          
+
+          .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 1;
+          }
+          
+          
+          .hero-overlay {
+            background: linear-gradient(to top, rgba(113, 0, 186, 0.85), rgba(0, 0, 0, 0.1));
+            color: white;
+            position: relative;
+            z-index: 2; /* Brings it above the image */
+            padding: 40px;
+            text-align: center; 
+              
+          }
+          
+          .hero-overlay h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 5%; 
+          }
+          
+          .hero-overlay p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            margin-top: 12%; 
+          }
+          
+          .search-box {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+          }
+          
+          .input-group {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.85rem;
+            min-width: 150px;
+          }
+          
+          .input-group i {
+            margin-right: 6px;
+            color: #666;
+          }
+          
+          .input {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            margin-top: 4px;
+          }
+          
+          .cta-btn {
+            background: #ff5a1f;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background 0.3s;
+          }
+          
+          .cta-btn i {
+            margin-left: 8px;
+          }
+          
+          .cta-btn:hover {
+            background: #e04e1a;
+          }
+          
+          .notice {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #ccc;
+          }
+          
+          .notice i {
+            color: limegreen;
+            margin-right: 6px;
+          }
+          
+       
+          /* =================== ============================ */
+    
+    /* Sticky search bar that appears on scroll */
+    .sticky-search {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        padding: 12px 24px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        display: none;
+        z-index: 9999;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      
+      .sticky-search .input-group {
+        margin-right: 10px;
+      }
+      
+      .sticky-search button {
+        background: #ff5a1f;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .sticky-search i {
+        margin-right: 5px;
+      }
+      
+/* ========== Responsive tweaks ========== */
+
+@media (max-width: 992px) {
+    .hero-overlay h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-overlay p {
+      font-size: 1.1rem;
+      margin-top: 8%;
+    }
+  
+    .search-box {
+      gap: 14px;
+      padding: 16px;
+    }
+  
+    .cta-btn {
+      padding: 12px 20px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      width: 95%;
+      height: 70vh;
+      margin: 30px auto;
+    }
+  
+    .hero-overlay {
+      padding: 30px 20px;
+    }
+  
+    .hero-overlay h1 {
+      font-size: 2rem;
+      margin-top: 8%;
+    }
+  
+    .hero-overlay p {
+      font-size: 1rem;
+      margin-top: 6%;
+      margin-bottom: 30px;
+    }
+  
+    .search-box {
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px;
+    }
+  
+    .input-group {
+      width: 100%;
+      min-width: unset;
+    }
+  
+    .cta-btn {
+      width: 100%;
+      padding: 14px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      width: 100%;
+      height: 60vh;
+      margin: 20px auto;
+    }
+  
+    .hero-overlay h1 {
+      font-size: 1.6rem;
+    }
+  
+    .hero-overlay p {
+      font-size: 0.9rem;
+      margin-top: 5%;
+    }
+  
+    .cta-btn {
+      font-size: 0.95rem;
+    }
+  }      
+  
+           /* =================== ============================ */
+           .hostel-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2%;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 0 20px;
+          }
+          
+          .hostel-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            width: 100%;
+            max-width: 360px;
+            justify-self: center;
+            margin-bottom: 30px;
+          }
+          
+          .hostel-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 22px rgba(0, 0, 0, 0.25);
+          }
+          
+          .hostel-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+          
+          .hostel-content {
+            padding: 16px;
+          }
+          
+          .hostel-content h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+          }
+          
+          .hostel-content .location,
+          .hostel-content .description {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #555;
+          }
+          
+          .features {
+            margin-bottom: 10px;
+          }
+          
+          .features i {
+            margin-right: 8px;
+            color: #0288d1;
+          }
+          
+          .price-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 8px;
+          }
+          
+          .price-details small {
+            display: block;
+            color: #888;
+          }
+          
+          .price-details strong {
+            color: #0288d1;
+            font-size: 18px;
+          }
+          
+          /* ============================ */
+          /* Responsive tweaks for hostel cards */
+          @media (max-width: 768px) {
+            .hostel-wrapper {
+              gap: 16px;
+            }
+          
+            .hostel-card {
+              max-width: 90%; /* Allow cards to take more width on mobile */
+            }
+          
+            .hostel-content h2 {
+              font-size: 18px;
+            }
+          
+            .hostel-content .location,
+            .hostel-content .description {
+              font-size: 13px;
+            }
+          
+            .price-details strong {
+              font-size: 16px;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .hostel-card {
+              max-width: 100%;
+            }
+          
+            .hostel-image img {
+              height: 160px;
+            }
+          }
+          
+          
+                 
+
+
+          .extra-info {
+            flex: 0 0 28%;
+            padding: 18px;
+            background: #fafafa;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eaeaea;
+            position: sticky;
+            top: 20px;
+            height: fit-content;
+            margin-top: 30px;
+          }
+          
+          .extra-info p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+          }
+          
+          .extra-info i {
+            color: #7b2cbf;
+            margin-right: 8px;
+            font-size: 15px;
+          }
+          
+          /* ============================ */
+          /* Responsive tweaks for extra-info */
+          @media (max-width: 1024px) {
+            .extra-info {
+              flex: 0 0 100%;
+              position: relative;
+              top: unset;
+              margin-top: 20px;
+            }
+          }
+          
+          @media (max-width: 768px) {
+            .extra-info {
+              flex: 0 0 100%;
+              padding: 16px;
+            }
+          
+            .extra-info p {
+              font-size: 14px;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .extra-info {
+              padding: 14px;
+            }
+          
+            .extra-info p {
+              font-size: 13.5px;
+            }
+          }
+          
+          
+  /*===============================     ELEVATOR         =========================================  */
+
+        
+  .d-flex {
+    display: flex;
+    min-height: 50vh;
+    width: 90%;
+    position: relative;
+    margin: auto;
+  }
+
+  .left-panel {
+    background-color: #7b2cbf;
+    color: #fff;
+    padding: 30px;
+    margin-left: 1%;
+    width: 500px;
+    border-top-right-radius: 30px;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .left-panel.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .rating-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    max-width: 750px;  /* was 400px — made it wider */
+    margin: 30px auto;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  .rating-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #7b2cbf;
+  }
+  
+  .rating-header .star {
+    font-size: 26px;
+  }
+  
+  .rating-text {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+  
+  .rating-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    font-size: 16px;
+  }
+  
+  .rating-label {
+    flex: 1.2;
+    color: #444;
+  }
+  
+  .progress {
+    flex: 3;
+    background: #e9ecef;
+    border-radius: 10px;
+    height: 10px;
+    margin: 0 14px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #d39d52, #9d4edd);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+  }
+  
+  .rating-score {
+    flex: 0;
+    font-weight: 500;
+    color: #333;
+  }
+  
+
+  
+
+  .right-panel {
+    background: #f8f9fa; /* soft light background */
+    padding: 40px;
+    border-radius: 16px;
+    height: 100vh;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  .right-panel h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  
+  .right-panel h1 span {
+    color: #7b2cbf;
+  }
+  
+  .right-panel p {
+    font-size: 15px;
+    text-align: justify;
+  }
+  
+  .right-panel p br {
+    margin-bottom: 20px;
+  }
+  
+  .right-panel p::first-letter {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7b2cbf;
+  }
+  
+
+  
+  /* Left Panel */
+  .left-panel {
+    background-color: #7b2cbf;
+    color: #fff;
+    padding: 30px;
+    margin-left: 1%;
+    width: 500px;
+    border-top-right-radius: 30px;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .left-panel.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Stack full width on mobile */
+  @media (max-width: 992px) {
+    .left-panel {
+      width: 100%;
+      border-radius: 20px;
+      min-height: auto;
+    }
+  }
+  
+  /* Rating Card adjustments already good — just tighten padding on tiny screens */
+  @media (max-width: 576px) {
+    .rating-card {
+      padding: 20px;
+    }
+  
+    .rating-header {
+      font-size: 18px;
+    }
+  
+    .rating-text {
+      font-size: 14px;
+    }
+  }
+  
+  /* Right Panel */
+  .right-panel {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 16px;
+    height: 100vh;
+    max-width: 700px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+    color: #333;
+  }
+  
+  /* Mobile tweaks for right panel */
+  @media (max-width: 992px) {
+    .right-panel {
+      height: auto;
+      padding: 25px;
+      margin: 20px auto;
+    }
+  
+    .right-panel h1 {
+      font-size: 28px;
+    }
+  
+    .right-panel p {
+      font-size: 15px;
+    }
+  }
+  
+/*  ==================        ===================== */
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 16px;
+    margin: 30px auto;
+    max-width: 1130px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    font-family: 'Poppins', sans-serif;
+    height: auto; /* allow it to grow based on content */
+  }
+  
+  /* FAQs */
+  .faq-item {
+    margin-bottom: 14px;
+  }
+  
+  .faq-question {
+    background: none;
+    color: #000;
+    border-radius: 8px;
+    padding: 14px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+    font-weight: 700;
+  }
+  
+  .faq-question:hover {
+    background: #f1f1f1;
+  }
+  
+  .faq-answer {
+    display: none;
+    padding: 12px 16px;
+    margin-top: 6px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    color: #444;
+    font-size: 15px;
+  }
+  
+  .faq-answer.active {
+    display: block;
+  }
+  
+  .arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+  }
+  
+  .rotate {
+    transform: rotate(180deg);
+  }
+  
+  /* Locations */
+  .location-section {
+    margin: 40px 0;
+  }
+  
+  .location-section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+  }
+  
+  .location-section .highlight {
+    color: #7b2cbf;
+  }
+  
+  .location-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .location-link {
+    display: inline-block;
+    padding: 18px 32px;
+    background: #7b2cbf;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    text-align: center;
+    flex: 1 1 45%;
+  }
+  
+  .location-link:hover {
+    background: #5a189a;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .info-section {
+      flex-direction: column;
+      padding: 30px;
+      gap: 30px;
+    }
+  
+    .location-section h2 {
+      font-size: 24px;
+    }
+  
+    .location-link {
+      font-size: 16px;
+      padding: 14px 24px;
+    }
+  }
+  
+  
+        /* Fooooooooooter */
+
+        /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); */
+
+        .footer {
+            position: relative;
+            background: linear-gradient(to top right, #003973, #0088a9, #00bf72);
+            color: #fff;
+            padding: 60px 40px 30px;
+            overflow: hidden;
+            border-top-right-radius: 100px;
+            font-family: 'Poppins', sans-serif;
+          }
+          
+          .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            z-index: 2;
+            position: relative;
+          }
+          
+          .footer-left {
+            max-width: 450px;
+            margin-left: 40px;
+          }
+          
+          .footer-left h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 15px;
+          }
+          
+          .footer-left p {
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #ffffff;
+          }
+          
+          .footer-right {
+            text-align: left;
+            max-width: 300px;
+            margin-right: 40px;
+          }
+          
+          .footer-right h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 14px;
+          }
+          
+          .quick-links {
+            display: flex;
+            gap: 50px;
+            width: 100%;
+            padding-top: 20px;
+          }
+          
+          .quick-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          .quick-links ul li {
+            margin-bottom: 8px;
+          }
+          
+          .quick-links ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            letter-spacing: 0.4px;
+            display: inline-block;
+            padding: 4px 0;
+            position: relative;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+          }
+          
+          .quick-links ul li a::before {
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #ccefff;
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease, left 0.3s ease;
+          }
+          
+          .quick-links ul li a:hover {
+            color: #ccefff;
+            padding-left: 10px;
+          }
+          
+          .quick-links ul li a:hover::before {
+            opacity: 1;
+            left: -10px;
+          }
+          
+          .copyright {
+            font-size: 13px;
+            opacity: 0.75;
+            margin-top: 10px;
+          }
+          
+          .wave-animation {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 300%;
+            height: 140px;
+            background: linear-gradient(270deg, #003973, #0088a9, #00bf72, #003973);
+            background-size: 1200% 1200%;
+            animation: oceanFlow 20s ease infinite;
+            transform: rotate(-4deg) translateY(30px);
+            border-top-right-radius: 150px;
+            z-index: 1;
+            opacity: 0.9;
+          }
+          
+          @keyframes oceanFlow {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%;
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+          
+          /* Responsive tweaks */
+          @media (max-width: 768px) {
+            .footer-inner {
+              flex-direction: column;
+              gap: 30px;
+            }
+          
+            .footer-left,
+            .footer-right {
+              margin: 0;
+              max-width: 100%;
+              text-align: center;
+            }
+          
+            .quick-links {
+              flex-direction: column;
+              align-items: center;
+              gap: 20px;
+            }
+          
+            .quick-links ul li a {
+              font-size: 15px;
+            }
+          
+            .footer-left h2 {
+              font-size: 26px;
+            }
+          
+            .footer-right h3 {
+              font-size: 18px;
+            }
+          }
+          
